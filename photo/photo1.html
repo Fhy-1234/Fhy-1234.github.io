@@ -70,7 +70,7 @@
 <!-- Icon -->
 
     
-<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4807631_awsvukbcylp.css">
 
 
 
@@ -149,7 +149,7 @@
     
     
         <div class="trm-logo-text">
-            F<span>hy</span>
+            风<span>何鸢</span>
         </div>
     
 </a>
@@ -169,7 +169,7 @@
                 <ul>
                     
                     <li>
-                        <a  href="https://fhy123s-blog.framer.website/" target="">
+                        <a  href="https://fhy1234.framer.media/" target="">
                             旧版
                         </a>
                     </li>
@@ -321,6 +321,50 @@
 </div>
 
 
+    <div id="giscus-wrap" class="trm-card trm-scroll-animation comment-container"></div>
+<script data-swup-reload-script>
+    function loadGiscus() {
+        let nowTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+        const config = {
+            src: 'https://giscus.app/client.js',
+            "data-repo": 'Fhy1024/Fhy1024.github.io',
+            "data-repo-id": 'R_kgDOKyLkZA',
+            "data-category": 'General',
+            "data-category-id": 'DIC_kwDOKyLkZM4Cl4BL',
+            "data-mapping": 'pathname',
+            "data-reactions-enabled": '1',
+            "data-emit-metadata": '0',
+            "data-theme": nowTheme,
+            "data-lang": 'zh-CN',
+            crossorigin: "anonymous",
+            async: true
+        }
+        let ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').insertAdjacentElement('afterbegin', ele)
+    }
+
+    function changeGiscusTheme() {
+        let theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+
+        function sendMessage(message) {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+
+        sendMessage({
+            setConfig: {
+                theme: theme
+            }
+        });
+    }
+
+    loadGiscus();
+</script>
+
 
                     <div class="trm-divider footer-divider"></div>
 
@@ -333,7 +377,7 @@
         <div class="trm-footer-item">
             <span>© 2023 - 2025</span>
             <span class="footer-separator"data-separator=" · "></span>
-            <span class="trm-accent-color">Fhy的个人博客</span>
+            <span class="trm-accent-color">Fhy的博客</span>
         </div>
     
 
